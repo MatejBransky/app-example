@@ -1,0 +1,8 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "component testing",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true
+}
