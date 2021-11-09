@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "app-example",
+  "workspaces": [
+    "frontend",
+    "tests"
+  ],
+  "scripts": {
+    "client": "cd client && yarn dev",
+    "services": "docker-compose -f docker-compose.services.yml",
+    "prod": "docker-compose -f docker-compose.services.yml -f docker-compose.client.yml",
+    "tests": "docker-compose -f docker-compose.services.yml -f docker-compose.client.yml -f docker-compose.tests.yml"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": "2cdbd50c-724f-4e2d-a326-8df6933d2b5d",
+      "createdTimestamp": 1636496652863,
+      "username": "admin",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "credentials": [
+        {
+          "id": "c029d145-07b5-471a-9259-fdfc6a207ca2",
+          "type": "password",
+          "createdDate": 1636496658580,
+          "secretData": "{\"value\":\"9lTdvy3kISWs03oMRgIDXCP4EmgHlqU3hTJuRCwV/Vg3GwWJb9R7yGxGl6GROmDleBD6uki+PJKJdKl7s/A4IA==\",\"salt\":\"uPcgxnpqDa5x/KoaEhGLkw==\",\"additionalParameters\":{}}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": ["default-roles-demo-realm", "app-admin"],
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "id": "6fec4777-cbee-4e87-8270-ee0b1124630f",
+      "createdTimestamp": 1636496675153,
+      "username": "adminuser",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "credentials": [
+        {
+          "id": "859d5aa5-0e13-44bc-8a69-e93c4b81f9d5",
+          "type": "password",
+          "createdDate": 1636496687694,
+          "secretData": "{\"value\":\"JwhbZP3Buf4YiFm8I4dVW6rkqWc3LF7N5ubYs2KV59LSw6sA2ehqHVcqLH5QSqj5xwrEDrYvuOpDYPYoWf/sfQ==\",\"salt\":\"9FOr1OE9gUC7a8PMngzI1g==\",\"additionalParameters\":{}}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": ["app-user", "default-roles-demo-realm", "app-admin"],
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "id": "bf8eb161-dc50-4c2a-8c47-e4bada20cdff",
+      "createdTimestamp": 1636496625172,
+      "username": "user",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "credentials": [
+        {
+          "id": "61db0a54-27d0-4ebf-9bcc-e7b87767e7e4",
+          "type": "password",
+          "createdDate": 1636496633319,
+          "secretData": "{\"value\":\"nuoaf1a5pnQW8SCf8OweFzyb8zkR3MQ/LW2PAN2LdRxI4zu4JzQrhqlNZKbr0g6YIaZrxetfrsB5rfGPar+qyw==\",\"salt\":\"/QFFz2eg+3RNdfEBWinJVw==\",\"additionalParameters\":{}}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": ["app-user", "default-roles-demo-realm"],
+      "notBefore": 0,
+      "groups": []
+    }
+  ]
+}

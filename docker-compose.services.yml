@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  keycloak:
+    image: jboss/keycloak:latest
+    volumes:
+      - ./keycloak:/opt/jboss/keycloak/imports
+    environment:
+      KEYCLOAK_IMPORT: /opt/jboss/keycloak/imports/realm-export.json -Dkeycloak.profile.feature.upload_scripts=enabled
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+    ports:
+      - "8080:8080"
+      - "8443:8443"
