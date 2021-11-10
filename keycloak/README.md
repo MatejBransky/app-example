@@ -25,3 +25,7 @@ The Keycloak docker image is complete crap with many problem, e.g. be aware of t
 
 - [https://stackoverflow.com/a/66964764/10735867](https://stackoverflow.com/a/66964764/10735867).
 - [upload scripts](https://stackoverflow.com/a/66964764/10735867)
+
+## Local dev requirements
+
+- frontend runs on different URL so the Keycloak needs to allow related web origin.
