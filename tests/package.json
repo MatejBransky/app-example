@@ -4,5 +4,8 @@
   "description": "component testing",
   "main": "index.js",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "cypress": "^9.0.0"
+  }
 }
