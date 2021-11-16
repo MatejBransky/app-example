@@ -4,8 +4,21 @@ import Keycloak from "keycloak-js";
 import "./index.css";
 import App from "./App";
 import { ReactKeycloakProvider } from "@react-keycloak/web";
+import { getConfig } from "./config";
 
-const keycloak = Keycloak();
+if (import.meta.env.MODE !== "production") {
+  const { initMock } = await import("./test/msw/browser");
+  const { devConfig } = await import("../devConfig");
+  const msw = initMock(devConfig);
+  await msw.worker.start({
+    onUnhandledRequest: "bypass",
+  });
+  globalThis.__MSW__ = msw;
+}
+
+const config = await getConfig()
+
+const keycloak = Keycloak(config.auth);
 
 const eventLogger = (event: unknown, error: unknown) => {
   console.log("onKeycloakEvent", event, error);
@@ -14,6 +27,7 @@ const eventLogger = (event: unknown, error: unknown) => {
 const tokenLogger = (tokens: unknown) => {
   console.log("onKeycloakTokens", tokens);
 };
+
 
 ReactDOM.render(
   <React.StrictMode>

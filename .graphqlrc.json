@@ -1,0 +1,9 @@
+{
+  "$schema": "https://unpkg.com/graphql-config@4.0.1/config-schema.json",
+  "projects": {
+    "client": {
+      "schema": "server/schema.graphql",
+      "documents": "client/src/**/*.graphql"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+schema {
+  mutation: Mutation
+  query: Query
+}
+
+type Mutation {
+  login(username: String!, password: String!): User
+}
+
+enum Status {
+  UNRESPONSIVE
+  READY
+}
+
+type Query {
+  status: Status!
+  user: User
+}
+
+interface Node {
+  id: ID!
+}
+
+type User implements Node {
+  id: ID!
+  username: String!
+}

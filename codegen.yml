@@ -1,0 +1,18 @@
+overwrite: true
+schema: server/schema.graphql
+documents: client/src/**/*.graphql
+generates:
+  client/src/generated/introspection.json:
+    plugins:
+      - introspection
+    config:
+      minify: true
+  client/src/generated/graphql.tsx:
+    plugins:
+      - typescript
+      - typescript-operations
+      - named-operations-object
+      - typescript-react-apollo
+# hooks:
+#   afterAllFileWrite:
+#     - prettier --write

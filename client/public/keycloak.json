@@ -1,6 +1,6 @@
 {
   "realm": "demo-realm",
-  "auth-server-url": "http://localhost:8080/auth/",
+  "auth-server-url": "http://localhost:8083/auth/",
   "ssl-required": "external",
   "resource": "react-web-app",
   "public-client": true,
