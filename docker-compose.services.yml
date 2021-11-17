@@ -1,14 +1,28 @@
 version: "3.7"
 
 services:
-  keycloak:
-    image: jboss/keycloak:latest
+  db:
+    image: postgres
+    restart: always
+    env_file:
+      - db/database.env
     volumes:
-      - ./keycloak:/opt/jboss/keycloak/imports
-    environment:
-      KEYCLOAK_IMPORT: /opt/jboss/keycloak/imports/realm-export.json -Dkeycloak.profile.feature.upload_scripts=enabled
-      KEYCLOAK_USER: admin
-      KEYCLOAK_PASSWORD: admin
+      - ./db/data/:/var/lib/postgresql/data/
     ports:
-      - "8080:8080"
-      - "8443:8443"
+      - 5432:5432
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+  # keycloak:
+  #   image: jboss/keycloak:latest
+  #   volumes:
+  #     - ./keycloak:/opt/jboss/keycloak/imports
+  #   environment:
+  #     KEYCLOAK_IMPORT: /opt/jboss/keycloak/imports/realm-export.json -Dkeycloak.profile.feature.upload_scripts=enabled
+  #     KEYCLOAK_USER: admin
+  #     KEYCLOAK_PASSWORD: admin
+  #   ports:
+  #     - "8080:8080"
+  #     - "8443:8443"
